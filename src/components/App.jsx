@@ -1,16 +1,16 @@
+import { PageTitle } from './PageTitle/PageTitle';
+import { EventBoard } from './EventBoard/EventBoard';
+import upcomingEvents from '../upcoming-events.json';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    //*<> - також може бути пустим як фрагмент
+    <>
+      <PageTitle /*1*/ text="24th Core Worlds Coalition Conference" />
+      <EventBoard events={upcomingEvents} />
+    </>
   );
 };
+
+//* 1. данные должны приходить в месте где происходит рендер страницы, они
+//* будут выступать пропсами для компонента;
